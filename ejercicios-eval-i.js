@@ -83,8 +83,29 @@ console.log("-----------------------Ejercicio 7--------------------------") /* a
 // }
 //     console.log(mensaje);
 
-//console.log("-----------------------Ejercicio 8--------------------------") /* El profesor dejó instrucciones en el video (Revisarlo) */
-//console.log("-----------------------Ejercicio 9--------------------------") /* El profesor dejó instrucciones en el video (Revisarlo) */
+console.log("-----------------------Ejercicio 8--------------------------") /* El profesor dejó instrucciones en el video (Revisarlo) */
+// const arreglo1 = [2, 5, 2, 3, 7, 2]                                         /* El profesor modificó  */
+// const arreglo2 = [1, 5, 3, 3]
+// const nuevoArreglo = [...arreglo1, ...arreglo2]
+// let menor10;
+// // console.log(nuevoArreglo)
+// if(nuevoArreglo.length >= 10){
+//     menor10 = true;
+// }else{
+//     menor10 = false;
+// }
+// console.log("¿La cantidad de elementos es mayor o igual a 10?" + menor10)
+
+console.log("-----------------------Ejercicio 9--------------------------") /* El profesor dejó instrucciones en el video (Revisarlo) */
+// const arreglo1 = [2, 5, 2]
+// const arreglo2 = [1, 5, 3]
+// const nuevoArreglo = [...arreglo1, ...arreglo2]
+
+// for(i = 0; i < nuevoArreglo.length; i++){
+//     nuevoArreglo[i] = nuevoArreglo[i] * 2;
+// }
+// console.log(nuevoArreglo)
+
 console.log("-----------------------Ejercicio 10--------------------------")
 // let numero1 = Number(prompt("Ingrese la calificacion"))
 // // let numero2 = Number(prompt("Ingrese la segunda calificacion"))
@@ -177,7 +198,7 @@ console.log("-----------------------Ejercicio 14--------------------------")
 //     console.log(`EL salario en el año ${i} es: $${salario.toFixed(2)}`) // INTERESANTE: Parece que por el funcionamiento del lenguaje en la computadora, 1500*1.1 no da un número exacto, esta vez si tuve que usar ayuda de la IA, me dio esta funcion: .toFixed(2) para los 2 decimales
 // }
 
-console.log("-----------------------Ejercicio 14--------------------------")
+console.log("-----------------------Ejercicio 15--------------------------")
 // let palabras = ["manzana", "banana", "cereza", "uva", "fresa"];
 // let palabra_mas_larga = ""
 
@@ -192,7 +213,7 @@ console.log("-----------------------Ejercicio 14--------------------------")
 // }
 //     console.log(`La palabra más larga: ${palabra_mas_larga}`)
 
-console.log("-----------------------Ejercicio 15--------------------------")    // Este sí me hizo pensar más rato
+console.log("-----------------------Ejercicio 16--------------------------")    // Este sí me hizo pensar más rato
 // let cartas = [1, 2, 3, 4, 2, 3, 5, 6, 7, 8, 1, 9, 10, 10];
 
 // for(let i=0; i<cartas.length; i++){
@@ -209,14 +230,89 @@ console.log("-----------------------Ejercicio 15--------------------------")    
 //     }
 // }
 
-//console.log("-----------------------Ejercicio 16--------------------------")
-console.log("-----------------------Ejercicio 19--------------------------")    // Me salteo a este porque es uno que ya resolví arriba  y está ezz :v
-let numeros = [];
-let index = 0;
+console.log("-----------------------Ejercicio 17--------------------------")
+// let toppingSelec = Number(prompt(`Ingrese el índice de su topping (Oreo 10MXN : 1 | KitKat 15MXN : 2 | Brownie 20MXN : 3)`))
+// const helado = 50
+// const toppings = [
+//     {nombre: "oreo", precio: 10, disponibilidad: true},
+//     {nombre: "kitkat", precio: 15, disponibilidad: false},
+//     {nombre: "brownie", precio: 20, disponibilidad: true},
+// ]
 
-do{
-    numeros[index] = Number(prompt(`Ingrese el número ${index+1} (Ingresa 0 para detener)`))
-    index++
-}while(numeros[index-1] != 0)
-numeros[index-1]= null    //Esto es para quitar el ultimo digito porque siempre será 0 (-1 porque el ultimo while le sumó index++ ya que el codigo se ejecuta antes) :v
-console.log("El conjunto de numeros es: " + numeros)
+// let precioTotal = 0;
+// let mensaje= "";
+
+// switch(toppingSelec){
+//     case 1:
+//         precioTotal = helado
+//         if(toppings[0].disponibilidad == true){
+//             precioTotal = precioTotal + toppings[0].precio
+//             mensaje = "Helado con " + toppings[0].nombre
+//         }else{
+//             mensaje = "No tenemos este topping, lo sentimos. Solo el helado."
+//         }
+//         break;
+//     case 2:
+//         precioTotal = helado
+//         if(toppings[1].disponibilidad == true){
+//             precioTotal = precioTotal + toppings[1].precio
+//             mensaje = "Helado con " + toppings[1].nombre
+//         }else{
+//             mensaje = "No tenemos este topping, lo sentimos. Solo el helado."
+//         }
+//         break;
+//     case 3:
+//         precioTotal = helado
+//         if(toppings[2].disponibilidad == true){
+//             precioTotal = precioTotal + toppings[2].precio
+//             mensaje = "Helado con " + toppings[2].nombre
+//         }else{
+//             mensaje = "No tenemos este topping, lo sentimos. Solo el helado."
+//         }
+//         break;
+//     default:
+//         console.log("Índice de topping inválido")
+// }
+
+// console.log(`${mensaje} Cuenta: ${precioTotal}`)
+
+console.log("-----------------------Ejercicio 18--------------------------")
+let planSelec = Number(prompt(`Ingrese el índice de su plan (Course 4999MXN : 1 | Carrera 3999MXN : 2 | Master 2999MXN : 3)`))
+let becaSelec = Number(prompt(`Si cuenta con una beca, por favor ingrese el índice de su beca (Facebook-20% : 1 | Google-15% : 2 | Jesua-50% : 3)`))
+
+let mensaje = "Usted ha seleccionado ";
+
+const planes = [
+    {nombre: "course", precio: 4999, duracion: 2},
+    {nombre: "carrera", precio: 3999, duracion: 6},
+    {nombre: "master", precio: 2999, duracion: 12},
+]
+const beca = [
+    {nombre: "facebook", descuento: 0.2},
+    {nombre: "google", descuento: 0.15},
+    {nombre: "jesua", descuento: 0.5},
+]
+
+if(planSelec > 0 && planSelec <=3){
+    mensaje = mensaje + planes[planSelec-1].nombre + ". El cual tiene un costo mensual de: " + planes[planSelec-1].precio + "MXN y una duración de: " + planes[planSelec-1].duracion + " meses."
+
+    if(becaSelec > 0 && becaSelec <=3){
+        mensaje = mensaje + " El costo total con la beca " + beca[becaSelec-1].nombre + " sería: " + ((planes[planSelec-1].precio * planes[planSelec-1].duracion)*(1-beca[becaSelec-1].descuento)).toFixed(2) + "MXN. "
+    }else{
+        mensaje = mensaje + " El costo total sería: " + (planes[planSelec-1].precio * planes[planSelec-1].duracion) + "MXN. "
+    }
+}else{
+    mensaje = "Se ha seleccionado un índice de incorrecto"
+}
+console.log(mensaje);
+
+console.log("-----------------------Ejercicio 19--------------------------")    // Me salteo a este porque es uno que ya resolví arriba  y está ezz :v
+// let numeros = [];
+// let index = 0;
+
+// do{
+//     numeros[index] = Number(prompt(`Ingrese el número ${index+1} (Ingresa 0 para detener)`))
+//     index++
+// }while(numeros[index-1] != 0)
+// numeros[index-1]= null    //Esto es para quitar el ultimo digito porque siempre será 0 (-1 porque el ultimo while le sumó index++ ya que el codigo se ejecuta antes) :v
+// console.log("El conjunto de numeros es: " + numeros)
